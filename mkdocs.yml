@@ -1,0 +1,52 @@
+site_name: scd2
+repo_url: https://github.com/haluk/scd2
+site_url: https://haluk.github.io/scd2
+site_description: Design and implement a data warehousing solution to manage slow-changing dimension tables, capturing historical changes while maintaining data consistency and integrity.
+site_author: Haluk Dogan
+edit_uri: edit/main/docs/
+repo_name: haluk/scd2
+copyright: Maintained by <a href="https://haluk.com">haluk</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/scd2"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/haluk/scd2
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/scd2
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
